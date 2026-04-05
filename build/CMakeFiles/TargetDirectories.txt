@@ -1,0 +1,15 @@
+/media/swarup/New Volume/Codes 4-2/Alg3/build/CMakeFiles/agp_lib.dir
+/media/swarup/New Volume/Codes 4-2/Alg3/build/CMakeFiles/agp_solver.dir
+/media/swarup/New Volume/Codes 4-2/Alg3/build/CMakeFiles/benchmark_driver.dir
+/media/swarup/New Volume/Codes 4-2/Alg3/build/CMakeFiles/edit_cache.dir
+/media/swarup/New Volume/Codes 4-2/Alg3/build/CMakeFiles/rebuild_cache.dir
+/media/swarup/New Volume/Codes 4-2/Alg3/build/CMakeFiles/list_install_components.dir
+/media/swarup/New Volume/Codes 4-2/Alg3/build/CMakeFiles/install.dir
+/media/swarup/New Volume/Codes 4-2/Alg3/build/CMakeFiles/install/local.dir
+/media/swarup/New Volume/Codes 4-2/Alg3/build/CMakeFiles/install/strip.dir
+/media/swarup/New Volume/Codes 4-2/Alg3/build/_deps/json-build/CMakeFiles/edit_cache.dir
+/media/swarup/New Volume/Codes 4-2/Alg3/build/_deps/json-build/CMakeFiles/rebuild_cache.dir
+/media/swarup/New Volume/Codes 4-2/Alg3/build/_deps/json-build/CMakeFiles/list_install_components.dir
+/media/swarup/New Volume/Codes 4-2/Alg3/build/_deps/json-build/CMakeFiles/install.dir
+/media/swarup/New Volume/Codes 4-2/Alg3/build/_deps/json-build/CMakeFiles/install/local.dir
+/media/swarup/New Volume/Codes 4-2/Alg3/build/_deps/json-build/CMakeFiles/install/strip.dir
