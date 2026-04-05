@@ -6,6 +6,7 @@
 #include "../geometry/visibility.hpp"
 #include "../ip/ip_formulation.hpp"
 #include "../ip/ip_solver.hpp"
+#include "../utils/step_recorder.hpp"
 #include "splitter.hpp"
 #include "verifier.hpp"
 #include <functional>
@@ -50,6 +51,9 @@ struct IterativeAlgorithmConfig {
 
     // Verbosity
     int verbosity = 1;
+
+    // Step recording output file (empty = disabled)
+    std::string step_output_file;
 
     // Default configuration
     static IterativeAlgorithmConfig default_config() {
@@ -218,6 +222,34 @@ private:
 
     // Current solution
     ip::IPSolution current_solution_;
+
+    // Step recorder for visualization
+    std::unique_ptr<utils::StepRecorder> step_recorder_;
+
+    /**
+     * @brief Record initialization step
+     */
+    void recordInitialization();
+
+    /**
+     * @brief Record IP solve step
+     */
+    void recordIPSolve(int stage, const ip::IPSolution& solution);
+
+    /**
+     * @brief Record split operation
+     */
+    void recordSplit(int face_id, const std::string& split_type);
+
+    /**
+     * @brief Record granularity update
+     */
+    void recordGranularityUpdate(int new_k);
+
+    /**
+     * @brief Record termination step
+     */
+    void recordTermination(const std::vector<Point>& final_guards);
 
     /**
      * @brief Iteration result enumeration

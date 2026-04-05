@@ -85,6 +85,7 @@ set(ALGORITHM_SOURCES
 
 set(UTIL_SOURCES
     src/core/utils/logger.cpp
+    src/core/utils/step_recorder.cpp
 )
 
 set(ALL_SOURCES

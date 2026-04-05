@@ -228,12 +228,11 @@ def solve_polygon(index):
         with os.fdopen(input_fd, 'w') as f:
             json.dump(polygon, f)
 
-        # Call C++ solver
+        # Call C++ solver (no timeout - large polygons can take >10 minutes)
         result = subprocess.run(
             [solver_path, input_path, '--output', output_path, '--verbosity', '0'],
             capture_output=True,
-            text=True,
-            timeout=120
+            text=True
         )
 
         # Check for solver errors (return codes: 0=optimal, 2=suboptimal, both are OK)
@@ -265,8 +264,6 @@ def solve_polygon(index):
                 'stderr': result.stderr
             }), 500
 
-    except subprocess.TimeoutExpired:
-        return jsonify({'error': 'Solver timeout (>120s)'}), 504
     except json.JSONDecodeError as e:
         return jsonify({'error': f'Invalid solver output: {e}'}), 500
     except Exception as e:
